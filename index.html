@@ -8,10 +8,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id"
+        content="545112029295-3ooe2n1pprtilcl98v3ikh9nbm83162j.apps.googleusercontent.com">
     <title>Home</title>
+    <style>
+        .container {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- MENU -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Ximoromero</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -40,18 +49,39 @@
             </ul>
         </div>
     </nav>
-    <p id="demo"></p>
-    <button class="btn btn-primary" id="click">Push</button>
+    <!-- END MENU -->
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="container">
+        <h2 id="username"></h2>
+        <img src="" id="image">
+        <h3 id="email"></h3>
+        <a href="#" onclick="signOut();" id="out">Sign out</a>
+    </div>
     <script>
 
-        $(document).ready(function () {
-            $('#click').click(function () {
-                $('#demo').append('<div class="alert alert-success" role="alert">This is a success alert—check it out!</div>');
-                setTimeout(() => {
-                    $('.alert-success').fadeOut();
-                }, 2000);
+
+        function onSignIn(googleUser) {
+            let profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            $('#username').text(profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            $('#image').attr('src', profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            $('#email').text(profile.getEmail());
+            $('.container').show();
+            $('.g-signin2').hide();
+        }
+
+        function signOut() {
+            let auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+                $('.container').hide();
+                $('.g-signin2').show();
             });
-        });
+        }
+
     </script>
 </body>
 
