@@ -17,6 +17,7 @@ body {
 .contenedor {
   border-radius: 6px;
   margin: auto;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
