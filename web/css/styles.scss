@@ -16,6 +16,10 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  width: 30%;
+  @media (max-width: 576px) {
+    width: 100%;
+  }
   #main_title {
     text-align: center;
     padding: 20px;

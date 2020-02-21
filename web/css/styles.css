@@ -25,6 +25,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 30%;
+}
+
+@media (max-width: 576px) {
+  .contenedor {
+    width: 100%;
+  }
 }
 
 .contenedor #main_title {
