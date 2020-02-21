@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f32dfec8d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../web/css/styles.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h3 id="main_title">Choose your gender</h3>
+        <div class="gender">
+            <div class="top">
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="male" class="male" title="Male">
+                    <img src="../../web/img/man2.png">
+                    <h3>Male</h3>
+                </label>
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="female" class="female" title="Female">
+                    <img src="../../web/img/girl.png">
+                    <h3>Female</h3>
+                </label>
+            </div>
+            <!--      <div class="other" title="Other">
+                <h3>Other</h3>
+                <img src="">
+            </div> -->
+        </div>
+        <p id="middle_p">Hello Friend! <br> Please, fill the form below to get started!</p>
+        <form action="" method="POST" id="registerForm">
+            <div class="fields">
+                <div id="field" class="field1">
+                    <i class="far fa-user"></i><input type="text" title="Username" placeholder="Username" name="username" id="username">
+                </div>
+                <div id="field" class="field2">
+                    <i class="far fa-envelope"></i><input type="email" title="Email" placeholder="Email" name="email" id="email">
+                </div>
+                <div id="field" class="field3">
+                    <i class="fas fa-lock"></i><input type="password" title="Password" placeholder="Password" name="password" id="password"><i class="far fa-eye mostrarClave"></i>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>Registered?<a href="#" title="Login">Login here</a></p>
+                <input type="submit" value="Register" title="Register" name="registerButton">
+            </div>
+        </form>
+    </div>
+
+    <script src="../../web/js/jquery-3.4.1.js"></script>
+    <script src="../../web/js/app.js"></script>
+    <script src="../../web/js/validaForm.js"></script>
+</body>
+
+</html>

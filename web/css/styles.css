@@ -13,4 +13,260 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+
+.contenedor {
+  border-radius: 6px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contenedor #main_title {
+  text-align: center;
+  padding: 20px;
+  color: #00bbf0;
+}
+
+.contenedor .gender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.contenedor .gender .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contenedor .gender .top .male,
+.contenedor .gender .top .female {
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  margin: 15px;
+  padding: 15px;
+  width: 180px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.contenedor .gender .top .male h3,
+.contenedor .gender .top .female h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #444444;
+}
+
+.contenedor .gender .top .male img,
+.contenedor .gender .top .female img {
+  width: 120px;
+}
+
+.contenedor .gender .top input {
+  display: none;
+}
+
+.contenedor .gender .other {
+  border: 1px solid #cccccc;
+  width: 390px;
+  border-radius: 8px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contenedor .gender .other h3 {
+  padding: 10px;
+  font-size: 16px;
+  color: #444444;
+}
+
+.contenedor #middle_p {
+  text-align: center;
+  margin: 20px;
+  color: #444444;
+}
+
+.contenedor #registerForm .fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor #registerForm .fields #field {
+  position: relative;
+  border: 1px solid #cccccc;
+  width: 88%;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px;
+}
+
+.contenedor #registerForm .fields #field i {
+  margin: 15px;
+  color: #cccccc;
+  font-size: 18px;
+}
+
+.contenedor #registerForm .fields #field input {
+  width: 85%;
+  border: none;
+  padding: 10px 6px;
+  font-size: 16px;
+  color: #333333;
+  outline: 0;
+}
+
+.contenedor #registerForm .fields #field input::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+.contenedor #registerForm .fields #field input:-ms-input-placeholder {
+  color: #cccccc;
+}
+
+.contenedor #registerForm .fields #field input::-ms-input-placeholder {
+  color: #cccccc;
+}
+
+.contenedor #registerForm .fields #field input::placeholder {
+  color: #cccccc;
+}
+
+.contenedor #registerForm .fields #field:focus-within {
+  border-color: #00bbf0;
+}
+
+.contenedor #registerForm .fields #field:focus-within::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 14px;
+  background: #00bbf0;
+  color: #ffffff;
+  padding: 2px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.contenedor #registerForm .fields .field1:focus-within::before {
+  content: "Username" !important;
+}
+
+.contenedor #registerForm .fields .field2:focus-within::before {
+  content: "Email" !important;
+}
+
+.contenedor #registerForm .fields .field3:focus-within::before {
+  content: "Password" !important;
+}
+
+.contenedor #registerForm .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor #registerForm .bottom p {
+  padding: 20px;
+  margin-left: 5px;
+  font-size: 16px;
+  color: #555555;
+}
+
+.contenedor #registerForm .bottom p a {
+  text-decoration: none;
+  color: #00bbf0;
+  margin-left: 10px;
+}
+
+.contenedor #registerForm .bottom p a:hover {
+  text-decoration: underline;
+}
+
+.contenedor #registerForm .bottom input {
+  background: #005792;
+  margin-right: 30px;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  width: 100px;
+  height: 35px;
+  border-radius: 4px;
+  outline: 0;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.active,
+.active2 {
+  border-color: #00bbf0 !important;
+}
+
+.active::before,
+.active2::before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00bbf0;
+  color: #ffffff;
+  line-height: 40px;
+  font-size: 18px;
+  -webkit-box-shadow: 0 0 4px 0 dodgerblue;
+          box-shadow: 0 0 4px 0 dodgerblue;
+}
+
+.active::before {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.active2::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.mostrarClave {
+  cursor: pointer;
+}
 /*# sourceMappingURL=styles.css.map */
